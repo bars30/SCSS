@@ -34,3 +34,11 @@ body {
   float: left;
   margin-right: 10px;
 }
+
+a {
+  font-size: 1.1em;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  color: blue;
+  padding: 5px 15px;
+}

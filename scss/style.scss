@@ -26,6 +26,7 @@ body {
  width: $blockWidth;
  border: $border;
 }
+// ----------------
 #central_block {
  padding: 20px;
 
@@ -42,4 +43,40 @@ body {
 // #central_block > ul {
 //  list-style: none;
 // }
+// ------------------
+
+
+// ----- ### 3 ### -----
+// благодаря миксинов мы можем создавать переиспользуемые блоки
+// то есть по сути если говорить простыми словами то мы можем
+// создать некий шаблон, который будет вмещать определенные 
+// свойства и далее этот шаблон мы можем использовать как
+// свойства два различных блок
+@mixin font ($color: red, $weight) {
+ font-size: 1.1em;
+ font-weight: $weight;
+ font-family: Arial, sans-serif;
+ color: $color;
+}
+@mixin padd($padd...){
+ padding: $padd;
+}
+a {
+ @include font(blue, bold);
+ // @include font($weight:bold, $color: blue);
+ @include padd(5px 15px);
+}
+
+
+// очень удобный миксин для адаптива:
+// @mixin max-screen($res) {
+//   @media screen and (max-width: $res) {
+//     @content;
+//   }
+// }
+// На место переменной ставишь разрешение экрана, например: 
+
+//     @include max-screen(991px) {
+//       display: none;
+//     }
 
