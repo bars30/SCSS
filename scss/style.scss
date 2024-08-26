@@ -1,3 +1,31 @@
+// чтобы создать переменную нам необходимо указать знак $
+$bgColor : #bc8f8f;
+$blockWidth: 300px;
+$border: 4px solid rgb(72, 72, 160);
+
+* {
+ margin: 0;
+ padding: 0;
+}
+// Comment
 body {
  background: rgb(122, 122, 220);
 }
+// обращаюсь ко всем блокам у которых нету класса  first
+.block:not(.first){
+ background: $bgColor;
+ height: 200px;
+ margin-bottom: 20px;
+ width: $blockWidth;
+ border: $border;
+}
+.first {
+ background: $bgColor;
+ height: 100px;
+ margin-bottom: 20px;
+ width: $blockWidth;
+ border: $border;
+}
+
+
+
