@@ -42,3 +42,29 @@ a {
   color: blue;
   padding: 5px 15px;
 }
+
+a {
+  color: #000;
+}
+a:hover {
+  color: red;
+}
+a:active {
+  color: blue;
+}
+a:visited {
+  color: green;
+}
+
+a {
+  color: #000;
+}
+a:hover {
+  color: red;
+}
+a:active {
+  color: blue;
+}
+a:visited {
+  color: green;
+}

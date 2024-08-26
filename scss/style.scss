@@ -46,7 +46,7 @@ body {
 // ------------------
 
 
-// ----- ### 3 ### -----
+// ----- ### 4 ### -----
 // благодаря миксинов мы можем создавать переиспользуемые блоки
 // то есть по сути если говорить простыми словами то мы можем
 // создать некий шаблон, который будет вмещать определенные 
@@ -79,4 +79,52 @@ a {
 //     @include max-screen(991px) {
 //       display: none;
 //     }
+
+// ----- ### 5 ### -----
+
+@mixin link($link, $hover, $active, $visited) {
+ color: $link;
+
+ &:hover {
+  color: $hover;
+ }
+ &:active {
+  color: $active;
+ }
+ &:visited {
+  color: $visited;
+ }
+}
+
+// a:hover {
+//  color: red;
+// }
+a {
+ // &:hover {
+ //  color: red;
+ // }
+ @include link(#000, red, blue, green)
+}
+
+
+@mixin link2($link, $hover, $active, $visited) {
+ a {
+  color: $link;
+
+  &:hover {
+   color: $hover;
+  }
+  &:active {
+   color: $active;
+  }
+  &:visited {
+   color: $visited;
+  }
+ }
+}
+@include link2(#000, red, blue, green)
+
+
+
+
 
