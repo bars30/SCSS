@@ -26,6 +26,20 @@ body {
  width: $blockWidth;
  border: $border;
 }
+#central_block {
+ padding: 20px;
 
+ ul {
+  list-style: none;
+  display: inline-block;
+ }
 
+ li {
+  float: left;
+  margin-right: 10px;
+ }
+}
+// #central_block > ul {
+//  list-style: none;
+// }
 
