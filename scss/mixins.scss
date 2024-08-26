@@ -1,0 +1,57 @@
+
+// ----- ### 4 ### -----
+// благодаря миксинов мы можем создавать переиспользуемые блоки
+// то есть по сути если говорить простыми словами то мы можем
+// создать некий шаблон, который будет вмещать определенные 
+// свойства и далее этот шаблон мы можем использовать как
+// свойства два различных блок
+@mixin font ($color: red, $weight) {
+ font-size: 1.1em;
+ font-weight: $weight;
+ font-family: Arial, sans-serif;
+ color: $color;
+}
+@mixin padd($padd...){
+ padding: $padd;
+}
+
+
+
+@mixin link($link, $hover, $active, $visited) {
+ color: $link;
+
+ &:hover {
+  color: $hover;
+ }
+ &:active {
+  color: $active;
+ }
+ &:visited {
+  color: $visited;
+ }
+}
+
+
+
+@mixin link2($link, $hover, $active, $visited) {
+ a {
+  color: $link;
+
+  &:hover {
+   color: $hover;
+  }
+  &:active {
+   color: $active;
+  }
+  &:visited {
+   color: $visited;
+  }
+ }
+}
+
+
+
+
+
+
+

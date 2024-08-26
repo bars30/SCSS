@@ -1,7 +1,5 @@
-// чтобы создать переменную нам необходимо указать знак $
-$bgColor : #bc8f8f;
-$blockWidth: 300px;
-$border: 4px solid rgb(72, 72, 160);
+@import "variables";
+@import "mixins";
 
 * {
  margin: 0;
@@ -46,21 +44,7 @@ body {
 // ------------------
 
 
-// ----- ### 4 ### -----
-// благодаря миксинов мы можем создавать переиспользуемые блоки
-// то есть по сути если говорить простыми словами то мы можем
-// создать некий шаблон, который будет вмещать определенные 
-// свойства и далее этот шаблон мы можем использовать как
-// свойства два различных блок
-@mixin font ($color: red, $weight) {
- font-size: 1.1em;
- font-weight: $weight;
- font-family: Arial, sans-serif;
- color: $color;
-}
-@mixin padd($padd...){
- padding: $padd;
-}
+
 a {
  @include font(blue, bold);
  // @include font($weight:bold, $color: blue);
@@ -82,19 +66,7 @@ a {
 
 // ----- ### 5 ### -----
 
-@mixin link($link, $hover, $active, $visited) {
- color: $link;
 
- &:hover {
-  color: $hover;
- }
- &:active {
-  color: $active;
- }
- &:visited {
-  color: $visited;
- }
-}
 
 // a:hover {
 //  color: red;
@@ -103,26 +75,10 @@ a {
  // &:hover {
  //  color: red;
  // }
- @include link(#000, red, blue, green)
+ @include link(#000, red, blue, rgb(181, 91, 61))
 }
 
-
-@mixin link2($link, $hover, $active, $visited) {
- a {
-  color: $link;
-
-  &:hover {
-   color: $hover;
-  }
-  &:active {
-   color: $active;
-  }
-  &:visited {
-   color: $visited;
-  }
- }
-}
-@include link2(#000, red, blue, green)
+@include link2(#000, rgb(255, 0, 21), blue, rgb(177, 82, 48))
 
 
 
